@@ -2,23 +2,29 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import Home from './pages/Home/Home';
+
+type User = {
+  bungieName: String;
+}
+
+const App = ()=>{
+
+  // user should be set with 0auth login data. This is placeholder until 0auth implemented
+  const user: User = {
+    bungieName: '',
+  };
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        user.bungieName ? 
+          <Home  user={user}/> :
+          <header className="App-header">
+            <button className="signIn" id='signIn'>Sign in</button>
+          </header>
+      }
     </div>
   );
 }

@@ -1,9 +1,16 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import Home from './pages/Home/Home';
 
-test('renders learn react link', () => {
+test('Sign in button shows when not logged in', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  type User = {
+    bungieName: String;
+  }
+  const user: User = {
+    bungieName: '',
+  };
+  const signInButton = document.getElementById('signIn');
+  expect(signInButton).toBeInTheDocument();
 });
