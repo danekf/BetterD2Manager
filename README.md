@@ -25,7 +25,8 @@ Creating an alternative to DIM using react and TS.
 
 
 
-
+# Bungie API reminders
+-
 
 # RESOURCES
 [] Bungie API resources: https://github.com/Bungie-net/api

@@ -13,7 +13,6 @@ type HomeProps = {
 const Home: React.FC<HomeProps> = ({user}) => {
 
 
-
   return (
     <div className="Home">
       {user.bungieName}

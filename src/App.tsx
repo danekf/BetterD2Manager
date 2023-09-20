@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 import Home from './pages/Home/Home';
+import getInfo from './helpers/getInfo/getInfo';
+
 
 type User = {
   bungieName: String;
@@ -15,9 +17,16 @@ const App = ()=>{
     bungieName: '',
   };
 
+  const apiKey: string = (process.env.REACT_APP_BUNGIE_API_KEY as string);
+
+
+
+
+  
 
   return (
     <div className="App">
+      <button className="getGjally" onClick={()=>getInfo(apiKey)}>Get Gjally</button>
       {
         user.bungieName ? 
           <Home  user={user}/> :
