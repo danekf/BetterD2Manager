@@ -22,7 +22,9 @@ Creating an alternative to DIM using react and TS.
     [] Set in game loadout with secondary item if it is used (QOL if character switching and dont have better manager is not open/used)
     [] Try to move items back to work for in game loadouts, if possible, when no longer online but better manager is open
 
+# Raid Team management
 
+Add pleasing raid management including raid polls for who is playing, team management and attendance, success, best times, etc.
 
 
 # Bungie API reminders
