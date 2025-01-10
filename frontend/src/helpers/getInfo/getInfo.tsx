@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getSpecificItemInfo = async (itemId: number) => {
 
-  const URL =`${process.env.REACT_APP_BACKEND_URL}/inventory/getSpecificItemsInfo`;
+  const URL =`/api/inventory/getSpecificItemsInfo`;
 
   const options = {
     params: {
