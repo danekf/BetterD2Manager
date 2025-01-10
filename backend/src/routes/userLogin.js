@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
+
 module.exports = (db) => {
   //signed in check
   router.get('/', (req, res) => {
@@ -32,3 +33,8 @@ module.exports = (db) => {
 
   return router;
 }
+
+/*
+https://luis91097.medium.com/setting-up-auth0-with-nodejs-express-f1aee8955453
+https://auth0.com/docs/quickstart/webapp/express/01-login
+*/

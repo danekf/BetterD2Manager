@@ -30,4 +30,11 @@ Within the package.json in your client file, add this line within the root of th
 
 
 ## TODO 
+[X] Add test call to bungie api for generic requests that do not require specific user information.
+  [] Manipulate the returned data. EX => 
+[] Add Auth0 authentication to proper routes.
+
+
+
+
 [] Dockerize the backend to eliminate the requirement to setup db.
