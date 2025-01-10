@@ -1,7 +1,8 @@
 import React, { useEffect, useState, } from 'react';
 
-import getInfo from "../../helpers/getInfo/getInfo";
+
 import { signIn } from '../../helpers/signIn/signIn';
+import { getSpecificItemInfo } from '../../helpers/getInfo/getInfo';
 
 type SignInProps = {
   
@@ -9,6 +10,9 @@ type SignInProps = {
 
 
 const SignIn:React.FC<SignInProps> = () => {
+
+  //test get gjally info from backend.
+  getSpecificItemInfo(1274330687);
 
   return(
     <header className="App-header">

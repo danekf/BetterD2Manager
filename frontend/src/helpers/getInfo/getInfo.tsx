@@ -1,22 +1,21 @@
+import axios from "axios";
 
-const getInfo = (apiKey: string) => {
-  let xhr = new XMLHttpRequest();
+export const getSpecificItemInfo = async (itemId: number) => {
 
-  xhr.open("GET", "https://www.bungie.net/platform/Destiny/Manifest/InventoryItem/1274330687/", true);
-  xhr.setRequestHeader("X-API-Key", apiKey);
+  const URL =`${process.env.REACT_APP_BACKEND_URL}/inventory/getSpecificItemsInfo`;
 
-  console.log(xhr)
-  
-  xhr.onreadystatechange = function(){
-   if(this.readyState === 4 && this.status === 200){
-    var json = JSON.parse(this.responseText);
-    console.log(json.Response?.data.inventoryItem.itemName); //Gjallarhorn
-    console.log(json)
-   }
+  const options = {
+    params: {
+      itemId: itemId,
+    }
   }
-  
-  xhr.send();
+
+  axios.get(URL, options)
+    .then((response) => {
+      console.log(response.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    })
 };
 
-
-export default getInfo;
