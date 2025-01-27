@@ -3,6 +3,7 @@ const PORT = process.env.PORT;
 const express = require('express');
 const bodyParser = require('body-parser');
 const { auth } = require('express-openid-connect');
+const cors = require('cors');
 
 //DB setup
 const { Pool } = require('pg');
@@ -25,9 +26,11 @@ db.connect()
 //App
 const app = express();
 const server = require('http').Server(app);
+//setup proper cors management but can use for dev
+app.use(cors())
 
 //for potential static content to serve
-app.use(express.static('public'));
+// app.use(express.static('public'));
 
 //request logging
 app.use((req, res, next) => {
@@ -35,11 +38,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.urlencoded({ extended: false}));
 app.use(express.json());
-
-//setup proper cors management but can use for dev
-// app.use(cors())
 
 //Auth0
 // const auth0Config = {

@@ -34,7 +34,4 @@ Within the package.json in your client file, add this line within the root of th
   [] Manipulate the returned data. EX => 
 [] Add Auth0 authentication to proper routes.
 
-
-
-
 [] Dockerize the backend to eliminate the requirement to setup db.
